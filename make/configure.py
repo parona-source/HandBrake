@@ -1665,6 +1665,7 @@ try:
         strip      = ToolProbe( 'STRIP.exe',      'strip',      'strip', abort=True )
         tar        = ToolProbe( 'TAR.exe',        'tar',        'gtar', 'tar', abort=True )
         python     = ToolProbe( 'PYTHON.exe',     'python',     os.path.basename(sys.executable), abort=True )
+        nm         = ToolProbe( 'NM.exe',         'nm',         'nm', abort=True )
 
         gcc_tools  = ['GCC.gcc',
                       'cc',
