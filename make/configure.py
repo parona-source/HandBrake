@@ -1025,6 +1025,10 @@ class ToolProbe( Action ):
         self.option = option
         self.names  = []
         self.kwargs = kwargs
+        if var.endswith('.exe'):
+            env = os.environ.get( var.removesuffix('.exe') )
+            if env is not None:
+                self.names.append( env )
         for name in names:
             try:
                 name = str(name)
